@@ -12,9 +12,8 @@ if ($method === 'GET') {
 } elseif ($method === 'POST') {
   $name = $_POST['displayName'] ?? '';
 }
-$name = trim($name);
 // TODO 3: Remove spaces at the beginning/end using trim().
-
+$name = trim($name);
 // This prevents the browser from interpreting the submitted value as HTML.
 $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
 $safeMethod = htmlspecialchars($method, ENT_QUOTES, 'UTF-8');
